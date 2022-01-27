@@ -28,3 +28,14 @@ describe("emoji is visible", () => {
     expect(getByLabelText("camera")).toHaveTextContent("📸");
   });
 });
+
+// Test for Link Visibility
+describe("links are visible", () => {
+  it("inserts text into the links", () => {
+    // Arrange
+    const { getByTestId } = render(<Nav />);
+    // Assert
+    expect(getByTestId('link')).toHaveTextContent('Oh Snap!');
+    expect(getByTestId('about')).toHaveTextContent('About me');
+  });
+});
