@@ -16,6 +16,8 @@ describe("About component", () => {
   //renders About test
   //
   // First Test
-
+  it('renders', () => {
+    render(<About />);
+  });
   // Second Test
 });
