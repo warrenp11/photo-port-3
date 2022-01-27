@@ -12,10 +12,6 @@ function Nav(props) {
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
   }, [currentCategory]);
-  
-  function categorySelected(name) {
-    console.log(`${name} clicked`)
-  }
 
   return (
     <header>
