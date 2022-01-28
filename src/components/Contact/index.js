@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 function ContactForm() {
+  // React Hook
+  const [formState, setFormState] = useState();
+
   // JSX
   return (
     <section>
