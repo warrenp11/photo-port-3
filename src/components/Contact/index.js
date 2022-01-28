@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { validateEmail } from '../../utils/helpers';
 
 function ContactForm() {
     // React Hook
@@ -9,6 +10,11 @@ function ContactForm() {
 
     // Form change handler
     function handleChange(e) {
+        if (e.target.name === 'email') {
+            const isValid = validateEmail(e.target.value);
+            console.log(isValid);
+            // isValid conditional statement
+          }  
         setFormState({...formState, [e.target.name]: e.target.value })
       }
     //   console.log(formState);
