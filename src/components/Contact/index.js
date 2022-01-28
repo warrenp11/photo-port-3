@@ -9,7 +9,7 @@ function ContactForm() {
 
     // Form change handler
     function handleChange(e) {
-        setFormState({...formState, name: e.target.value })
+        setFormState({...formState, [e.target.name]: e.target.value })
       }
       
       console.log(formState);
@@ -27,12 +27,12 @@ function ContactForm() {
         {/* // email input */}
         <div>
           <label htmlFor="email">Email address:</label>
-          <input type="email" name="email" defaultValue={email} />
+          <input type="email" name="email" defaultValue={email} onChange={handleChange} />
         </div>
         {/* // message text area */}
         <div>
           <label htmlFor="message">Message:</label>
-          <textarea name="message" rows="5" defaultValue={message} />
+          <textarea name="message" rows="5" defaultValue={message} onChange={handleChange} />
         </div>
         <button type="submit">Submit</button>
       </form>
