@@ -7,6 +7,13 @@ function ContactForm() {
     // destructure the formState object into its named properties, name, email, and message
     const { name, email, message } = formState;
 
+    // Form change handler
+    function handleChange(e) {
+        setFormState({...formState, name: e.target.value })
+      }
+      
+      console.log(formState);
+
   // JSX
   return (
     <section>
@@ -15,7 +22,7 @@ function ContactForm() {
         {/* // name input */}
         <div>
           <label htmlFor="name">Name:</label>
-          <input type="text" name="name" defaultValue={name} />
+          <input type="text" name="name" defaultValue={name} onChange={handleChange} />
         </div>
         {/* // email input */}
         <div>
