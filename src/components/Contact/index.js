@@ -33,11 +33,11 @@ function ContactForm() {
       }
     }
 
-    console.log("errorMessage", errorMessage);
-    
+    // console.log("errorMessage", errorMessage);
+
     if (!errorMessage) {
-        setFormState({ ...formState, [e.target.name]: e.target.value });
-      }
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+    }
   }
   //   console.log(formState);
 
@@ -82,6 +82,11 @@ function ContactForm() {
             onChange={handleChange}
           />
         </div>
+        {errorMessage && (
+          <div>
+            <p className="error-text">{errorMessage}</p>
+          </div>
+        )}
         <button type="submit">Submit</button>
       </form>
     </section>
