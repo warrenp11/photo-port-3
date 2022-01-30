@@ -1,8 +1,8 @@
 {
+  "homepage": "http://warrenp11.github.io/photo-port-3",
   "name": "photo-port-3",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://warrenp11.github.io/photo-port-3",
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
